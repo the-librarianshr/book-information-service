@@ -1,0 +1,27 @@
+{
+  "name": "book-information-service",
+  "version": "1.0.0",
+  "description": "This section shows the book cover, synopsis, author name and ratings",
+  "main": "index.js",
+  "scripts": {
+    "server-dev": "nodemon server/index.js",
+    "react-dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-librarianshr/book-information-service.git"
+  },
+  "author": "asoom-n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-librarianshr/book-information-service/issues"
+  },
+  "homepage": "https://github.com/the-librarianshr/book-information-service#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.6"
+  }
+}
