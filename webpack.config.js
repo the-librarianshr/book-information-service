@@ -1,22 +1,25 @@
-const path = require('path');
-const SRC_DIR = path.join(__dirname, './client/src');
-const DIST_DIR = path.join(__dirname, './public/dist')
+var path = require('path');
 
 module.exports = {
   mode: "development",
-  entry: `${SRC_DIR}/index.jsx`,
+  context: path.resolve(__dirname + '/client/src/'),
+  entry: './index.jsx',
   output: {
-    path: DIST_DIR,
+    path: __dirname + '/public/dist',
     filename: "bundle.js",
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
+        include: __dirname + '/client/src',
         loader: "babel-loader",
-        query: {
-          presets: ["es2015", "react"]
-        }
+        // options: {
+        //   presets: ['@babel/preset-env']
+        // },
+        // query: {
+        //   presets: ["es2015", "react"]
+        // }
       }
     ]
   }
