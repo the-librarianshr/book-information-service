@@ -5,7 +5,7 @@ module.exports = {
   context: path.resolve(__dirname + '/client/src/'),
   entry: './index.jsx',
   output: {
-    path: __dirname + '/public/dist',
+    path: path.join( __dirname, '/public/dist'),
     filename: "bundle.js",
   },
   module: {
@@ -14,12 +14,9 @@ module.exports = {
         test: /\.jsx?$/,
         include: __dirname + '/client/src',
         loader: "babel-loader",
-        // options: {
-        //   presets: ['@babel/preset-env']
-        // },
-        // query: {
-        //   presets: ["es2015", "react"]
-        // }
+        options: {
+          presets: ['@babel/preset-env']
+        }
       }
     ]
   }
